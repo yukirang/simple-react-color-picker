@@ -23,13 +23,9 @@ npm start
 
 less
 
-封装公共组件和方法
-
-将颜色生成方法抽离主逻辑
-
 添加Alpha
 
 单元测试
 
-提供API
+提供API(onClick first)
 
