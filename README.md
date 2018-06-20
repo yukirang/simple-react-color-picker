@@ -14,7 +14,6 @@ If you're tryting to figure out the principle of the picker, you may refer to:
 
 [Web colors - Wikipedia](https://en.wikipedia.org/wiki/Web_colors)
 
-Enjoy it!
 
 
 ## usage
