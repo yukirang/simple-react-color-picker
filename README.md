@@ -8,6 +8,12 @@ You can choose a base color on the layer panel first and then a range at bottom.
 
 You can also define your color by typing.
 
+If you're tryting to figure out the principle of the picker, you may refer to:
+
+[RGB的三维模型与渐变色-颜色系列之一](http://www.cnblogs.com/Free-Thinker/p/5569792.html)
+
+[Web colors - Wikipedia](https://en.wikipedia.org/wiki/Web_colors)
+
 Enjoy it!
 
 
@@ -19,13 +25,18 @@ npm start
 
 ## TODO
 
-渐进色优化
+Progessive color
 
-less
+Less
 
-添加Alpha
+Alpha
 
-单元测试
+LAB/HSL color space
 
-提供API(onClick first)
+Unit test
+
+API(onClick first)
+
+Npm pakage
+
 
