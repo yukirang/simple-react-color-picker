@@ -8,7 +8,7 @@ You can choose a base color on the layer panel first and then a range at bottom.
 
 You can also define your color by typing.
 
-If you're tryting to figure out the principle of the picker, you may refer to:
+If you're tryting to figure out the principle of the web color model, you may refer to:
 
 [RGB的三维模型与渐变色-颜色系列之一](http://www.cnblogs.com/Free-Thinker/p/5569792.html)
 
