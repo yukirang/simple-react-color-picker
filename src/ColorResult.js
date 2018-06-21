@@ -1,7 +1,4 @@
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
-
-import Color from './utils/color'
 
 export default class ColorResult extends Component{
 	constructor(props){
@@ -9,7 +6,7 @@ export default class ColorResult extends Component{
 	}
 	render(){
 		return(
-			<div style={{ width:'68px', height:'68px', backgroundColor:''+this.props.color}}>
+			<div style={{ width:'80px', height:'80px', backgroundColor:''+this.props.color}}>
 			</div>
 		);
 	}

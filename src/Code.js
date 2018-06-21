@@ -1,7 +1,4 @@
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
-
-import Color from './utils/color'
 
 export default class Code extends Component{
 	constructor(props){
@@ -11,12 +8,14 @@ export default class Code extends Component{
 	render(){
 		const code = this.props.colorCode;
 		return(
-			<input type="text" value={code} onChange = {this.handleChange}/>
+			<div>
+				Hex Code:
+				<input type="text" value={code} onChange = {this.handleChange} />
+			</div>
 		);
 	}
 	handleChange(e){
-		var text = e.target.value;
-		this.props.onInputChange(text);
+		this.props.onChange(e.target.value,'code');
 	}
 }
 

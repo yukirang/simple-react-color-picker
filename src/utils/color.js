@@ -1,7 +1,6 @@
 
 export function getLayer(index){
 	var i,j;
-	var r,g,b;
 	var currentBase = [0,0,0];
 	
 	var tempColor = [0,0,0];
@@ -25,8 +24,8 @@ export function getLayer(index){
 	return block;
 }
 
-export function toHex(r,g,b){
-		console.log(r+' '+g+' '+b);
+function toHex(r,g,b){
+		//console.log(r+' '+g+' '+b);
 		var num = ((r << 16) | (g << 8) | b)
 		var hex = num.toString(16);
 		while(hex.length < 6){
@@ -34,6 +33,7 @@ export function toHex(r,g,b){
 		}
 		return "#"+hex;
 }
+
 export function getColorCode(baseColor,rangeColor){
 		//console.log(baseColor);
 		var base = baseColor.split(',');
@@ -44,17 +44,32 @@ export function getColorCode(baseColor,rangeColor){
 export function getRangeList(baseColor){
 	//switch(type){
 	//	case "range":
-			console.log(baseColor);
+			//console.log(baseColor);
 			var base = baseColor.split(',');
-			var rangeTemp = []
+			var rangeTemp = [];
 			var i;
-			for(i = 0; i < 256; i+=2){
+			for(i = 0; i < 256; i+=3){
 				rangeTemp.push(i+','+base[1]+','+base[2]);
 			}
 			return rangeTemp;
 	//	case "alpha":
 				
 	//}
+}
+
+export function getAlphaList(){
+	var alphaTemp = [];
+	var i;
+	for(i = 0; i <= 1; i+=0.01){
+		alphaTemp.push(Math.round(i*100)/100);
+	}
+	return alphaTemp;
+}
+
+export function getColor(baseColor,rangeColor,alpha){
+	var base = baseColor.split(',');
+	var range = rangeColor.split(',');
+	return 'rgba('+range[0]+','+base[1]+','+base[2]+','+alpha+')';
 }
 
 /*function getBaseColor(){
