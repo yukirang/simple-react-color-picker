@@ -9,7 +9,7 @@ export default class Code extends Component{
 		const code = this.props.colorCode;
 		return(
 			<div>
-				Hex Code:
+				<div>Hex Code:</div>
 				<input type="text" value={code} onChange = {this.handleChange} />
 			</div>
 		);
