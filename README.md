@@ -15,7 +15,7 @@ If you're tryting to figure out the principle of the web color model, you may re
 
 [Web colors - Wikipedia](https://en.wikipedia.org/wiki/Web_colors)
 
-[RGBA color space](https://en.wikipedia.org/wiki/RGBA_color_space)
+[RGBA color space - Wikipedia](https://en.wikipedia.org/wiki/RGBA_color_space)
 
 
 ## usage
