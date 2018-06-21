@@ -5,7 +5,7 @@ The picker roughly looks like this:
 
 ![image](https://github.com/yukirang/color-picker/blob/master/src/picker.png)
 
-You can choose a base color on the layer panel first and then a range at bottom.
+You can choose a base color on the layer panel first and then range and/or alpha at bottom.
 
 You can also define your color by typing.
 
