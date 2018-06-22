@@ -7,9 +7,7 @@ export default class RangePicker extends Component{
 		super(props);
 		//this.handleClick = this.handleClick.bind(this);
 	}
-	handleClick(color){
-		this.props.onChange(color,'range');
-	}
+
 	render(){
 	var rangeList = getRangeList(this.props.baseColor);	 
 		return(
@@ -20,7 +18,7 @@ export default class RangePicker extends Component{
 						<tr>
 							{  
 								rangeList.map((item,index)=>{  
-									return <td key={item} onClick={this.handleClick.bind(this,item)} style={{backgroundColor:'rgb('+item+')'}}></td>  
+									return <td key={item} onClick={() => this.props.onChange(item,'range')} style={{backgroundColor:'rgb('+item+')'}}></td>  
 								})  
 							} 
 						</tr> 

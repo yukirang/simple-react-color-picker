@@ -1,4 +1,3 @@
-
 export function getLayer(index){
 	var i,j;
 	var currentBase = [0,0,0];
@@ -71,6 +70,7 @@ export function getColor(baseColor,rangeColor,alpha){
 	var range = rangeColor.split(',');
 	return 'rgba('+range[0]+','+base[1]+','+base[2]+','+alpha+')';
 }
+
 
 /*function getBaseColor(){
 	var i, j;
