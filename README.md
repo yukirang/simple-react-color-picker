@@ -27,7 +27,7 @@ npm start
 
 ## TODO
 
-Progessive color
+<t>Progessive color</t>
 
 Less
 
