@@ -20,25 +20,25 @@ If you're tryting to figure out the principle of the web color model, you may re
 
 ## usage
 
-npm install 
+`npm install`
 
-npm start
+`npm start`
 
 
 ## TODO
 
-<t>Progessive color</t>
+*Progessive color
 
-Less
+*Less
 
-Alpha
+*Alpha
 
-LAB/HSL color space
+*LAB/HSL color space
 
-Unit test
+*Unit test
 
-API(onClick first)
+*API(onClick first)
 
-Npm pakage
+*Npm pakage
 
 
