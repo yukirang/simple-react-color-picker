@@ -3,7 +3,7 @@ This is a simple color picker realized by React and raw javascript.
 
 The picker roughly looks like this:
 
-![image](https://github.com/yukirang/color-picker/blob/master/src/picker.png)
+![image](https://github.com/yukirang/color-picker/blob/master/src/images/picker.png)
 
 You can choose a base color on the layer panel first and then range and/or alpha at bottom.
 
