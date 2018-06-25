@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 
 import {getAlphaList} from './utils/color'
-import {withSubscription} from './helper/eventHandler'
+/*import {withSubscription} from './helper/eventHandler'*/
 import './css/style.less'
  
 export default class AlphaPicker extends Component{

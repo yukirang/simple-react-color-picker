@@ -23,7 +23,7 @@ export function getLayer(index){
 	return block;
 }
 
-function toHex(r,g,b){
+export function toHex(r,g,b){
 		//console.log(r+' '+g+' '+b);
 		var num = ((r << 16) | (g << 8) | b)
 		var hex = num.toString(16);

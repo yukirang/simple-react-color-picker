@@ -9,6 +9,7 @@
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-loader": "7.1.2",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react-app": "^3.1.1",
     "babel-runtime": "6.26.0",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
@@ -49,7 +50,7 @@
   "scripts": {
     "start": "node scripts/start.js webpack-dev-server",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "mocha --compilers js:babel-core/register test/testColor.js"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -87,15 +88,34 @@
   },
   "babel": {
     "presets": [
-      "react-app"
+      "react-app",
+      "babel-preset-env"
     ]
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.1.2",
     "copy-webpack-plugin": "^4.5.1",
     "less": "^3.0.4",
-    "less-loader": "^4.1.0"
-  }
+    "less-loader": "^4.1.0",
+    "mocha": "5.2.0"
+  },
+  "description": "This is a simple color picker realized by React and raw javascript.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukirang/react-color-picker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yukirang/react-color-picker/issues"
+  },
+  "homepage": "https://github.com/yukirang/react-color-picker#readme"
 }
