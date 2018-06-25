@@ -24,21 +24,24 @@ If you're tryting to figure out the principle of the web color model, you may re
 
 `npm start`
 
+## test
+` NODE_ENV=development npm test`
+
 
 ## TODO
 
-* Progessive color
+* Progessive color (done)
 
-* Less
+* Less (done)
 
-* Alpha
+* Alpha (done)
 
-* LAB/HSL color space
+* LAB/HSL color space 
 
-* Unit test
+* Unit test (done)
 
-* API(onClick first)
+* API
 
-* Npm pakage
+* Npm pakage 
 
 
