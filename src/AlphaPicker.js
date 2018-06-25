@@ -3,22 +3,20 @@ import ReactDOM from 'react-dom'
 
 import {getAlphaList} from './utils/color'
 import {withSubscription} from './helper/eventHandler'
+import './css/style.less'
  
 export default class AlphaPicker extends Component{
 	constructor(props){
 		super(props);
 		//this.handleClick = this.handleClick.bind(this);
 	}
-	handleClick(alpha){
-		this.props.onChange(alpha,'alpha');
-	}
 	render(){
 		var alphaList = getAlphaList();			
 		//console.log(alphaList); 
 		return(
-			<div id="AlphaPicker">
+			<div id="AlphaPicker" >
 				Alpha
-				<table width='350' height='15' border={0} cellSpacing={0} cellPadding={0} style={{cursor:'pointer',margin: '0',padding: '0'}}>
+				<table id="alpha-table">
 					<tbody>
 						<tr>
 							{  

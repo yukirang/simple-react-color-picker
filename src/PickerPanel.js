@@ -8,6 +8,9 @@ import Code from './Code'
 import {getColorCode} from './utils/color'
 import {getColor} from './utils/color'
 
+import './css/style.less'
+
+
 export default class PickerPanel extends Component{
 	constructor(props){
 		super(props);
@@ -67,19 +70,21 @@ export default class PickerPanel extends Component{
 				<BasePicker onChange={this.onChange}/>
 				<RangePicker onChange={this.onChange} baseColor = {this.state.baseColor} />
 				<AlphaPicker onChange={this.onChange} />
-				<Code colorCode = {this.state.colorCode} onChange = {this.onChange}/>
-				<ColorResult color = {this.state.color===1000?this.state.colorCode:this.state.color} />
-				
+				<div id="result">
+					<Code colorCode = {this.state.colorCode} alpha = {this.state.alpha} onChange = {this.onChange}/>
+					<ColorResult color = {this.state.color===0?this.state.colorCode:this.state.color}/>
+					{this.state.alpha}
+				</div>	
 			</div>
 		);
 	}
 }
 
 PickerPanel.defaultProps = {
-  defaultCode: '#fff',
-  defaultBase: '255,0,0',
-  defaultRange: '0,255,255',
-  defaultAlpha: 1000,
+  defaultCode: '#ffffff',
+  defaultBase: '0,255,255',
+  defaultRange: '255,0,0',
+  defaultAlpha: 0,
   onChange() {},
   style: {},
 };

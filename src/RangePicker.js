@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {getRangeList} from './utils/color'
-import './css/style.css'
+import './css/style.less'
 
 export default class RangePicker extends Component{
 	constructor(props){
@@ -11,9 +11,9 @@ export default class RangePicker extends Component{
 	render(){
 	var rangeList = getRangeList(this.props.baseColor);	 
 		return(
-			<div id="RangePicker">
+			<div id="range">
 				Range
-				<table width='350' height='15' border={0} cellSpacing={0} cellPadding={0} style={{cursor:'pointer'}}>
+				<table id="range-table">
 					<tbody>
 						<tr>
 							{  

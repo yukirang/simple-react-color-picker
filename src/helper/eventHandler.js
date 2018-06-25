@@ -8,4 +8,4 @@ export const withSubscription = compose(
       		console.log(event.target.value)
     	}
 	})
-)
+)()
