@@ -1,7 +1,7 @@
 {
-  "name": "react-color-picker",
+  "name": "simple-react-color-picker",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "ajv": "^6.5.1",
     "autoprefixer": "7.1.6",
