@@ -1,7 +1,7 @@
-/*import React from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import PickerPanel from './PickerPanel'
-import './css/style.less'*/
+import PickerPanel from './src/PickerPanel'
+import './src/css/style.less'
 
 
 /*ReactDOM.render(
