@@ -1,88 +1,28 @@
 {
-  "name": "simple-react-color-picker",
-  "version": "0.1.10",
-  "private": false,
-  "dependencies": {
-    "babel-core": "6.26.0",
-    "babel-loader": "7.1.2",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react-app": "^3.1.1",
-    "css-loader": "0.28.7",
-    "postcss-loader": "2.0.8",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "style-loader": "0.19.0",
-    "webpack": "^3.8.1"
-  },
-  "scripts": {
-    "start": "node scripts/start.js webpack-dev-server",
-    "build": "node scripts/build.js",
-    "test": "mocha --compilers js:babel-core/register test/testColor.js"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
-    ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
-    ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node",
-      "mjs"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "react-app",
-      "babel-preset-env"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "devDependencies": {
-    "babel-preset-env": "^1.7.0",
-    "chai": "^4.1.2",
-    "copy-webpack-plugin": "^4.5.1",
-    "less": "^3.0.4",
-    "less-loader": "^4.1.0",
-    "mocha": "5.2.0"
-  },
-  "description": "This is a simple color picker realized by React and raw javascript.",
+  "name": "react-color-picker",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yukirang/react-color-picker.git"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yukirang/react-color-picker/issues"
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   },
-  "homepage": "https://github.com/yukirang/react-color-picker#readme"
+  "dependencies": {
+    "css-loader": "^0.28.11",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "style-loader": "^0.21.0"
+  }
 }
