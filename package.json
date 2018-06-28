@@ -1,6 +1,6 @@
 {
   "name": "simple-react-color-picker",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "dependencies": {
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
