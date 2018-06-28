@@ -1,7 +1,7 @@
-/*import React from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import PickerPanel from './src/PickerPanel'
-import './src/css/style.less'*/
+import './src/css/style.less'
 
 
 /*ReactDOM.render(
@@ -10,7 +10,7 @@ import './src/css/style.less'*/
  	</div>,
  	document.getElementById('root')
 )*/
-module.exports = require('./src/');
+module.exports = require('./src/PickerPanel');
 
 
 
