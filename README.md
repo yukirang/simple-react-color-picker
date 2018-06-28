@@ -36,8 +36,6 @@ If you're tryting to figure out the principle of the web color model, you may re
 
 * Alpha (done)
 
-* LAB/HSL color space (canceled)
-
 * Unit test (done)
 
 * API
