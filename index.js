@@ -10,7 +10,7 @@ import './src/css/style.less'*/
  	</div>,
  	document.getElementById('root')
 )*/
-module.exports = require('./src/');
+module.exports = require('./src/PickerPanel');
 
 
 
