@@ -10,5 +10,6 @@ ReactDOM.render(
  	</div>,
  	document.getElementById('root')
 )*/
-var ColorPicker = require('./PickerPanel');
-export ColorPicker;
+//var ColorPicker = require('./src/PickerPanel');
+module.exports = require('./src/PickerPanel');
+//export default ColorPicker;
