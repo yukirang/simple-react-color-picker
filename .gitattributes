@@ -1,4 +1,0 @@
-*.js linguist-language=JSX
-*.jsx linguist-language=JSX
-*.less linguist-language=JSX
-*.html linguist-language=JSX
