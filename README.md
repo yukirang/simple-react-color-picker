@@ -33,7 +33,7 @@ import ColorPicker from 'simple-react-color-picker`
 
 ReactDOM.render(
 	<div>	
- 		<PickerPanel />
+ 		<ColorPicker />
  	</div>,
  	document.getElementById('root')
 )
