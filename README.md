@@ -20,25 +20,27 @@ If you're tryting to figure out the principle of the web color model, you may re
 
 ## usage
 
-`npm install`
+`npm install simple-react-color-picker`
 
-`npm start`
+In your jsx file:
+
+`import React, {Component} from 'react'
+ import ReactDOM from 'react-dom'
+ import ColorPicker from 'simple-react-color-picker`
+
+ While render the picker:
+
+`ReactDOM.render(
+	<div>	
+ 		<PickerPanel />
+ 	</div>,
+ 	document.getElementById('root')
+)`
+
 
 ## test
 ` NODE_ENV=development npm test`
 
 
-## TODO
 
-* Progessive color (done)
-
-* Less (done)
-
-* Alpha (done)
-
-* Unit test (done)
-
-* API
-
-* Npm pakage （suspended）
 
