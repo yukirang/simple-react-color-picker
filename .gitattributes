@@ -1,3 +1,5 @@
 *.js linguist-language=React
 *.jsx linguist-language=React
 *.css linguist-language=React
+*.less linguist-language=React
+*.html linguist-language=React
