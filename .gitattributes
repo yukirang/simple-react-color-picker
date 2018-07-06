@@ -1,4 +1,4 @@
-*.js linguist-language= java
-*.jsx linguist-language= java
-*.less linguist-language= java
-
+*.js linguist-language=Java
+*.jsx linguist-language=Java
+*.less linguist-language=Java
+*.html linguist-language=Java
