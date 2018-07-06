@@ -24,7 +24,7 @@ If you're tryting to figure out the principle of the web color model, you may re
 
 In your jsx file:
 
-`import React, {Component} from 'react'
+`import React from 'react'
  import ReactDOM from 'react-dom'
  import ColorPicker from 'simple-react-color-picker`
 
@@ -39,7 +39,7 @@ In your jsx file:
 
 
 ## test
-` NODE_ENV=development npm test`
+ NODE_ENV=development npm test`
 
 
 
