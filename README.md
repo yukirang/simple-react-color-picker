@@ -1,4 +1,3 @@
-[npm link to this package](https://www.npmjs.com/package/simple-react-color-picker)
 
 This is a simple color picker realized by React and raw javascript.
 
