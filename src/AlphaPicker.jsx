@@ -10,7 +10,7 @@ export default class AlphaPicker extends Component{
 		super(props);
 	}
 	render(){
-		var alphaList = getAlphaList();			
+		let alphaList = getAlphaList();			
 		//console.log(alphaList); 
 		return(
 			<div id="AlphaPicker" >

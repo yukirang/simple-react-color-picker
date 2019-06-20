@@ -21,24 +21,12 @@ export default class PickerPanel extends Component{
 			alpha: props.defaultAlpha,
 			color: ''
 		}
-		//this.handleBaseChange = this.handleBaseChange.bind(this);
-		//this.handleRangeChange = this.handleRangeChange.bind(this);
-		//this.handleInputChange = this.handleInputChange.bind(this);
 		this.onChange = this.onChange.bind(this);
 	}
-	/*handleBaseChange(base){
-		this.setState({baseColor:base, colorCode:getColorCode(base,base)});
-	}
-	handleRangeChange(range){
-		this.setState({range:range, colorCode:getColorCode(this.state.baseColor,range)});
-	}
-	handleInputChange(code){
-		this.setState({colorCode:code})
-	}*/
 	onChange(item,type){
-		var range = this.state.rangeColor;
-		var base = this.state.baseColor;
-		var alpha = this.state.alpha;
+		let range = this.state.rangeColor;
+		let base = this.state.baseColor;
+		let alpha = this.state.alpha;
 		switch(type){
 			case 'base':
 				this.setState({
@@ -72,7 +60,7 @@ export default class PickerPanel extends Component{
 				<AlphaPicker onChange={this.onChange} />
 				<div id="result">
 					<Code colorCode = {this.state.colorCode} alpha = {this.state.alpha} onChange = {this.onChange}/>
-					<ColorResult color = {this.state.color===0?this.state.colorCode:this.state.color}/>
+					<ColorResult color = {this.state.color === 0 ? this.state.colorCode:this.state.color}/>
 					{this.state.alpha}
 				</div>	
 			</div>
@@ -81,10 +69,10 @@ export default class PickerPanel extends Component{
 }
 
 PickerPanel.defaultProps = {
-  defaultCode: '#ffffff',
+  defaultCode: '#000000',
   defaultBase: '0,255,255',
   defaultRange: '255,0,0',
-  defaultAlpha: 0,
+  defaultAlpha: 1.0,
   onChange() {},
   style: {},
 };

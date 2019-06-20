@@ -8,7 +8,7 @@ export default class RangePicker extends Component{
 	}
 
 	render(){
-	var rangeList = getRangeList(this.props.baseColor);	 
+	let rangeList = getRangeList(this.props.baseColor);	 
 		return(
 			<div id="range">
 				Range
