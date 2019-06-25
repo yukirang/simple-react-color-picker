@@ -7,11 +7,13 @@ export default class BasePicker extends Component{
 
 	constructor(props){
 		super(props);
+		//this.handleColorChange = this.handleColorChange.bind(this);
+		//this.handleClick = this.handleClick.bind(this);
 	}
 	render(){
-		let layers = [];
+		var layers = [];
 
-		for(let i = 0 ; i < 6; i++)
+		for(var i = 0 ; i < 6; i++)
 		{
 			layers.push(getLayer(i));
 		}

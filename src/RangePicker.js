@@ -5,10 +5,11 @@ import './css/style.less'
 export default class RangePicker extends Component{
 	constructor(props){
 		super(props);
+		//this.handleClick = this.handleClick.bind(this);
 	}
 
 	render(){
-	let rangeList = getRangeList(this.props.baseColor);	 
+	var rangeList = getRangeList(this.props.baseColor);	 
 		return(
 			<div id="range">
 				Range

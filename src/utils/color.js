@@ -1,16 +1,16 @@
 export function getLayer(index){
-	let i,j;
-	let currentBase = [0,0,0];
+	var i,j;
+	var currentBase = [0,0,0];
 	
-	let tempColor = [0,0,0];
+	var tempColor = [0,0,0];
 
-	let block = [];
+	var block = [];
 
 	currentBase = [index*51, 0, 0];
 	tempColor = currentBase.concat();
 
 	for(i = 0;i < 6;i++){
-		let tempRow = [];
+		var tempRow = [];
 		tempRow.push(currentBase.toString());
 		for(j = 0; j < 5; j++){
 			tempColor[1] += 51;
@@ -25,8 +25,8 @@ export function getLayer(index){
 
 export function toHex(r,g,b){
 		//console.log(r+' '+g+' '+b);
-		let num = ((r << 16) | (g << 8) | b)
-		let hex = num.toString(16);
+		var num = ((r << 16) | (g << 8) | b)
+		var hex = num.toString(16);
 		while(hex.length < 6){
 			 hex = "0" + hex;
 		}
@@ -35,24 +35,30 @@ export function toHex(r,g,b){
 
 export function getColorCode(baseColor,rangeColor){
 		//console.log(baseColor);
-		let base = baseColor.split(',');
-		let range = rangeColor.split(',');
+		var base = baseColor.split(',');
+		var range = rangeColor.split(',');
 		return toHex(range[0],base[1],base[2]);
 }
 
 export function getRangeList(baseColor){
-			let base = baseColor.split(',');
-			let rangeTemp = [];
-			let i;
+	//switch(type){
+	//	case "range":
+			//console.log(baseColor);
+			var base = baseColor.split(',');
+			var rangeTemp = [];
+			var i;
 			for(i = 0; i < 256; i+=3){
 				rangeTemp.push(i+','+base[1]+','+base[2]);
 			}
 			return rangeTemp;
+	//	case "alpha":
+				
+	//}
 }
 
 export function getAlphaList(){
-	let alphaTemp = [];
-	let i;
+	var alphaTemp = [];
+	var i;
 	for(i = 0; i <= 1; i+=0.01){
 		alphaTemp.push(Math.round(i*100)/100);
 	}
@@ -60,14 +66,14 @@ export function getAlphaList(){
 }
 
 export function getColor(baseColor,rangeColor,alpha){
-	let base = baseColor.split(',');
-	let range = rangeColor.split(',');
+	var base = baseColor.split(',');
+	var range = rangeColor.split(',');
 	return 'rgba('+range[0]+','+base[1]+','+base[2]+','+alpha+')';
 }
 
 
 /*function getBaseColor(){
-	let i, j;
+	var i, j;
 	const baseColumn = getBaseColumn();
 	for(i = 0; i < 16; i++ ){
 			baseColor.push(getRow(baseColumn[i]))
@@ -76,9 +82,9 @@ export function getColor(baseColor,rangeColor,alpha){
 }*/
 
 /*function getBaseColumn(){
-	let columnBase = [264,-8,-8];
-	let baseColumn = [];
-	let i;
+	var columnBase = [264,-8,-8];
+	var baseColumn = [];
+	var i;
 	for(i = 0; i < 8; i++){
 		columnBase[0] -= 9; 
 		columnBase[1] += 8;
@@ -94,11 +100,11 @@ export function getColor(baseColor,rangeColor,alpha){
 }*/
 
 /*function getBaseRow(){
-	//let color = this.state.currentColor;
-	//let channel = this.state.channelState;
-	let tempRow = columnBase;
-	let i;
-	let row = [];
+	//var color = this.state.currentColor;
+	//var channel = this.state.channelState;
+	var tempRow = columnBase;
+	var i;
+	var row = [];
 	row.push[columnBase];
 	for(i = 0; i < 6; i++){
 		switch(channel){
@@ -126,9 +132,9 @@ export function getColor(baseColor,rangeColor,alpha){
 }*/
 
 /*function increaseBlock(channel,color){
-		let i;
-		let tempColor = color;
-		let block = [];
+		var i;
+		var tempColor = color;
+		var block = [];
 		for(i=0; i<5; i++){
 			tempColor[channel] += 51;
 		}
@@ -136,9 +142,9 @@ export function getColor(baseColor,rangeColor,alpha){
 }*/
 
 /*function decreaseBlock(channel,color){
-		let i;
-		let tempColor = color;
-		let block = [];
+		var i;
+		var tempColor = color;
+		var block = [];
 		for(i=0; i<5; i++){
 			tempColor[channel] -= 51;
 			block.push(RGB2HEX(tempColor));

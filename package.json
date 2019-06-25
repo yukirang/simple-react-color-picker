@@ -1,27 +1,30 @@
 {
-  "name": "simple-react-color-picker",
-  "version": "1.0.10",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha --timeout 10000",
-    "dev": "webpack-dev-server --hot"
+  "_from": "simple-react-color-picker",
+  "_id": "simple-react-color-picker@1.0.10",
+  "_inBundle": false,
+  "_integrity": "sha512-FRuKAwvzgfIlr35oBmujo8HW//IbP/IBKCJn4W+d3ahtMrfIxpnTmhTlbmKvCsRIi4lw8u6wWO2AzVkqgevXkg==",
+  "_location": "/simple-react-color-picker",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "simple-react-color-picker",
+    "name": "simple-react-color-picker",
+    "escapedName": "simple-react-color-picker",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/simple-react-color-picker/-/simple-react-color-picker-1.0.10.tgz",
+  "_shasum": "8c358458b0fd2a84d6a744ea76dce9e6a1d4d285",
+  "_spec": "simple-react-color-picker",
+  "_where": "/Users/rangke/Desktop/projects/test-color",
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-register": "^6.26.0",
-    "chai": "^4.2.0",
-    "less": "^3.0.4",
-    "less-loader": "^4.1.0",
-    "mocha": "^6.1.4",
-    "react-dom": "^16.7.0",
-    "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.14"
-  },
+  "bundleDependencies": false,
   "dependencies": {
     "css-loader": "^0.28.11",
     "extend": "^3.0.2",
@@ -31,9 +34,25 @@
     "style-loader": "^0.21.0",
     "webpack": "^4.35.0"
   },
-  "babel": {
-    "presets": [
-      "env"
-    ]
-  }
+  "deprecated": false,
+  "description": "[npm link to this package](https://www.npmjs.com/package/simple-react-color-picker)",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "react-dom": "^16.7.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "name": "simple-react-color-picker",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.10"
 }
