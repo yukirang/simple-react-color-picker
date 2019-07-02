@@ -1,6 +1,6 @@
 [npm link to this package](https://www.npmjs.com/package/simple-react-color-picker)
 
-This is a simple color picker realized by React and raw javascript.
+This is a simple color picker realized in React
 
 The picker roughly looks like this:
 
@@ -23,7 +23,7 @@ If you're trying to figure out the principle of the web color model, you may ref
 
 `npm install simple-react-color-picker`
 
-In your jsx file:
+Rendering:
 
 ```
 import React from 'react'
