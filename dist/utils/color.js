@@ -1,69 +1,91 @@
-export const getLayer = index => {
-  let i, j;
-  let currentBase = [0, 0, 0];
+"use strict";
 
-  let tempColor = [0, 0, 0];
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getColor = exports.getAlphaList = exports.getRangeList = exports.getColorCode = exports.toHex = exports.getLayer = void 0;
 
-  let block = [];
-
+var getLayer = function getLayer(index) {
+  var i, j;
+  var currentBase = [0, 0, 0];
+  var tempColor = [0, 0, 0];
+  var block = [];
   currentBase = [index * 51, 0, 0];
   tempColor = currentBase.concat();
 
   for (i = 0; i < 6; i++) {
-    let tempRow = [];
+    var tempRow = [];
     tempRow.push(currentBase.toString());
+
     for (j = 0; j < 5; j++) {
       tempColor[1] += 51;
       tempRow.push(tempColor.toString());
     }
+
     block.push(tempRow);
     currentBase[2] += 51;
     tempColor = currentBase.concat();
   }
+
   return block;
 };
 
-export const toHex = (r, g, b) => {
-  const num = (r << 16) | (g << 8) | b;
-  let hex = num.toString(16);
+exports.getLayer = getLayer;
+
+var toHex = function toHex(r, g, b) {
+  var num = r << 16 | g << 8 | b;
+  var hex = num.toString(16);
+
   while (hex.length < 6) {
     hex = '0' + hex;
   }
+
   return '#' + hex;
 };
 
-export const getColorCode = (baseColor, rangeColor) => {
+exports.toHex = toHex;
+
+var getColorCode = function getColorCode(baseColor, rangeColor) {
   //console.log(baseColor);
-  const base = baseColor.split(',');
-  const range = rangeColor.split(',');
+  var base = baseColor.split(',');
+  var range = rangeColor.split(',');
   return toHex(range[0], base[1], base[2]);
 };
 
-export const getRangeList = baseColor => {
-  const base = baseColor.split(',');
-  let rangeTemp = [];
-  let i;
+exports.getColorCode = getColorCode;
+
+var getRangeList = function getRangeList(baseColor) {
+  var base = baseColor.split(',');
+  var rangeTemp = [];
+  var i;
+
   for (i = 0; i < 256; i += 3) {
     rangeTemp.push(i + ',' + base[1] + ',' + base[2]);
   }
+
   return rangeTemp;
 };
 
-export const getAlphaList = () => {
-  let alphaTemp = [];
-  let i;
+exports.getRangeList = getRangeList;
+
+var getAlphaList = function getAlphaList() {
+  var alphaTemp = [];
+  var i;
+
   for (i = 0; i <= 1; i += 0.01) {
     alphaTemp.push(Math.round(i * 100) / 100);
   }
+
   return alphaTemp;
 };
 
-export const getColor = (baseColor, rangeColor, alpha) => {
-  const base = baseColor.split(',');
-  const range = rangeColor.split(',');
+exports.getAlphaList = getAlphaList;
+
+var getColor = function getColor(baseColor, rangeColor, alpha) {
+  var base = baseColor.split(',');
+  var range = rangeColor.split(',');
   return 'rgba(' + range[0] + ',' + base[1] + ',' + base[2] + ',' + alpha + ')';
 };
-
 /*function getBaseColor(){
 	var i, j;
 	const baseColumn = getBaseColumn();
@@ -144,3 +166,6 @@ export const getColor = (baseColor, rangeColor, alpha) => {
 		return block;
 }
 */
+
+
+exports.getColor = getColor;
