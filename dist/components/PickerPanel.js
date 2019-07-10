@@ -7,15 +7,15 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _BasePicker = _interopRequireDefault(require("../components/BasePicker"));
+var _BasePicker = _interopRequireDefault(require("./BasePicker"));
 
-var _RangePicker = _interopRequireDefault(require("../components/RangePicker"));
+var _RangePicker = _interopRequireDefault(require("./RangePicker"));
 
-var _AlphaPicker = _interopRequireDefault(require("../components/AlphaPicker"));
+var _AlphaPicker = _interopRequireDefault(require("./AlphaPicker"));
 
-var _ColorResult = _interopRequireDefault(require("../components/ColorResult"));
+var _ColorResult = _interopRequireDefault(require("./ColorResult"));
 
-var _Code = _interopRequireDefault(require("../components/Code"));
+var _Code = _interopRequireDefault(require("./Code"));
 
 var _color = require("../utils/color");
 
@@ -57,52 +57,52 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(PickerPanel).call(this, props));
 
-    _defineProperty(_assertThisInitialized(_this), "onChange", function (_ref) {
-      var item = _ref.item,
-          type = _ref.type;
-      // var range = this.state.rangeColor;
-      // var base = this.state.baseColor;
-      // var alpha = this.state.alpha;
+    _defineProperty(_assertThisInitialized(_this), "onBaseChange", function (e) {
+      console.log(e.target);
+      var alpha = _this.state.alpha;
+      var baseColor = e.target.getAttribute('value');
+
+      _this.setState({
+        baseColor: baseColor,
+        colorCode: (0, _color.getColorCode)(baseColor, baseColor),
+        color: (0, _color.getColor)(baseColor, baseColor, alpha)
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onRangeChange", function (e) {
       var _this$state = _this.state,
-          range = _this$state.range,
-          base = _this$state.base,
+          baseColor = _this$state.baseColor,
           alpha = _this$state.alpha;
+      console.log(e.target);
+      var rangeColor = e.target.getAttribute('value');
+      console.log(rangeColor);
 
-      switch (type) {
-        case 'base':
-          _this.setState({
-            baseColor: item,
-            colorCode: (0, _color.getColorCode)(item, item),
-            color: (0, _color.getColor)(item, item, alpha)
-          });
+      _this.setState({
+        rangeColor: rangeColor,
+        colorCode: (0, _color.getColorCode)(baseColor, rangeColor),
+        color: (0, _color.getColor)(baseColor, rangeColor, alpha)
+      });
+    });
 
-          break;
+    _defineProperty(_assertThisInitialized(_this), "onAlphaChange", function (e) {
+      var _this$state2 = _this.state,
+          rangeColor = _this$state2.rangeColor,
+          baseColor = _this$state2.baseColor;
+      var alpha = e.target.getAttribute('value');
 
-        case 'range':
-          _this.setState({
-            rangeColor: item,
-            colorCode: (0, _color.getColorCode)(base, item),
-            color: (0, _color.getColor)(base, item, alpha)
-          });
+      _this.setState({
+        alpha: alpha,
+        color: (0, _color.getColor)(baseColor, rangeColor, alpha)
+      });
+    });
 
-          break;
+    _defineProperty(_assertThisInitialized(_this), "onCodeChange", function (e) {
+      var code = e.target.value;
 
-        case 'code':
-          _this.setState({
-            colorCode: item,
-            color: item
-          });
-
-          break;
-
-        case 'alpha':
-          _this.setState({
-            alpha: item,
-            color: (0, _color.getColor)(base, range, item)
-          });
-
-          break;
-      }
+      _this.setState({
+        colorCode: code,
+        color: code
+      });
     });
 
     _this.state = {
@@ -111,8 +111,7 @@ function (_Component) {
       rangeColor: '255,0,0',
       alpha: 0,
       color: ''
-    }; // this.onChange = this.onChange.bind(this);
-
+    };
     return _this;
   }
 
@@ -120,18 +119,18 @@ function (_Component) {
     key: "render",
     value: function render() {
       return _react.default.createElement("div", null, _react.default.createElement(_BasePicker.default, {
-        onChange: this.onChange
+        onChange: this.onBaseChange
       }), _react.default.createElement(_RangePicker.default, {
-        onChange: this.onChange,
+        onChange: this.onRangeChange,
         baseColor: this.state.baseColor
       }), _react.default.createElement(_AlphaPicker.default, {
-        onChange: this.onChange
+        onChange: this.onAlphaChange
       }), _react.default.createElement("div", {
         id: "result"
       }, _react.default.createElement(_Code.default, {
         colorCode: this.state.colorCode,
         alpha: this.state.alpha,
-        onChange: this.onChange
+        onChange: this.onCodeChange
       }), _react.default.createElement(_ColorResult.default, {
         color: this.state.color === 0 ? 0 : this.state.color
       }), this.state.alpha));
@@ -139,15 +138,15 @@ function (_Component) {
   }]);
 
   return PickerPanel;
-}(_react.Component); // PickerPanel.defaultProps = {
-//   defaultCode: '#ffffff',
-//   defaultBase: '0,255,255',
-//   defaultRange: '255,0,0',
-//   defaultAlpha: 0,
-//   defaultColor: '',
-//   onChange() {},
-//   style: {}
-// };
-
+}(_react.Component);
 
 exports.default = PickerPanel;
+PickerPanel.defaultProps = {
+  defaultCode: '#ffffff',
+  defaultBase: '0,255,255',
+  defaultRange: '255,0,0',
+  defaultAlpha: 0,
+  defaultColor: '',
+  onChange: function onChange() {},
+  style: {}
+};

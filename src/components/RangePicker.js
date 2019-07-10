@@ -14,7 +14,8 @@ const RangePicker = ({ onChange, baseColor }) => {
               return (
                 <td
                   key={item}
-                  onClick={() => onChange(item, 'range')}
+                  onClick={onChange}
+                  value={item}
                   style={{ backgroundColor: 'rgb(' + item + ')' }}
                 />
               );

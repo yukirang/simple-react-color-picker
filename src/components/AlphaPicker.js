@@ -16,7 +16,8 @@ const AlphaPicker = ({ onChange }) => {
               return (
                 <td
                   key={item}
-                  onClick={onChange(item, 'alpha')}
+                  onClick={onChange}
+                  value={item}
                   style={{ backgroundColor: 'rgba(0,0,0,' + item + ')' }}
                 />
               );

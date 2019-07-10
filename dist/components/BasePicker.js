@@ -21,6 +21,10 @@ var BasePicker = function BasePicker(_ref) {
     layers.push((0, _color.getLayer)(i));
   }
 
+  var handleChange = function handleChange(e) {
+    onChange(e.target.value, 'code');
+  };
+
   return _react.default.createElement("div", {
     id: "BasePicker"
   }, "Base", _react.default.createElement("table", {
@@ -36,7 +40,8 @@ var BasePicker = function BasePicker(_ref) {
         return _react.default.createElement("td", {
           key: item,
           className: "block",
-          onClick: onChange(item, 'base'),
+          value: item,
+          onClick: onChange,
           style: {
             backgroundColor: 'rgb(' + item + ')'
           }

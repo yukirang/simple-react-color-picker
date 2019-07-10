@@ -11,24 +11,19 @@ require("../css/style.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var Code = function Code(_ref) {
-  var code = _ref.code,
+  var _React$createElement;
+
+  var colorCode = _ref.colorCode,
       alpha = _ref.alpha,
       onChange = _ref.onChange;
-
-  // const code = this.props.colorCode;
-  // const alpha = this.props.alpha;
-  var handleChange = function handleChange(e) {
-    e.preventDefault();
-    onChange(e.target.value, 'code');
-  };
-
-  return _react.default.createElement("div", null, _react.default.createElement("div", null, "Hex Code:"), _react.default.createElement("input", {
+  return _react.default.createElement("div", null, _react.default.createElement("div", null, "Hex Code:"), _react.default.createElement("input", (_React$createElement = {
     type: "text",
     id: "code",
-    value: code,
-    onChange: handleChange
-  }));
+    value: colorCode
+  }, _defineProperty(_React$createElement, "type", "code"), _defineProperty(_React$createElement, "onChange", onChange), _React$createElement)));
 };
 
 var _default = Code;

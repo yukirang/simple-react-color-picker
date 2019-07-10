@@ -9,6 +9,11 @@ const BasePicker = ({ onChange }) => {
   for (let i = 0; i < 6; i++) {
     layers.push(getLayer(i));
   }
+
+  const handleChange = e => {
+    onChange(e.target.value, 'code');
+  };
+
   return (
     <div id='BasePicker'>
       Base
@@ -28,7 +33,8 @@ const BasePicker = ({ onChange }) => {
                                 <td
                                   key={item}
                                   className='block'
-                                  onClick={onChange(item, 'base')}
+                                  value={item}
+                                  onClick={onChange}
                                   style={{
                                     backgroundColor: 'rgb(' + item + ')'
                                   }}

@@ -27,7 +27,8 @@ var AlphaPicker = function AlphaPicker(_ref) {
   }, _react.default.createElement("tbody", null, _react.default.createElement("tr", null, alphaList.map(function (item, index) {
     return _react.default.createElement("td", {
       key: item,
-      onClick: onChange(item, 'alpha'),
+      onClick: onChange,
+      value: item,
       style: {
         backgroundColor: 'rgba(0,0,0,' + item + ')'
       }

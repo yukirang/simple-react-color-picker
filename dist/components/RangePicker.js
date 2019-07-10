@@ -24,9 +24,8 @@ var RangePicker = function RangePicker(_ref) {
   }, _react.default.createElement("tbody", null, _react.default.createElement("tr", null, rangeList.map(function (item, index) {
     return _react.default.createElement("td", {
       key: item,
-      onClick: function onClick() {
-        return onChange(item, 'range');
-      },
+      onClick: onChange,
+      value: item,
       style: {
         backgroundColor: 'rgb(' + item + ')'
       }
