@@ -1,10 +1,10 @@
 {
   "name": "simple-react-color-picker",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "private": false,
   "license": "(ISC OR GPL-3.0)",
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "babel": {
     "presets": [
       "@babel/preset-env",
