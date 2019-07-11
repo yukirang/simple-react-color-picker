@@ -4,7 +4,7 @@ This is a simple color picker realized in React
 
 The picker roughly looks like this:
 
-<img src="ihttps://i.imgur.com/f7sR9zj.png" width="40%" align="middle">
+<img src="https://i.imgur.com/f7sR9zj.png" width="40%" align="middle">
 
 You can choose a base color on the layer panel first and then range and/or alpha at bottom.
 
