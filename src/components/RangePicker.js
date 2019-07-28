@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { getRangeList } from '../utils/color';
 import '../css/style.css';
 
 const RangePicker = ({ onChange, baseColor }) => {
   const rangeList = getRangeList(baseColor);
   return (
-    <div id='range'>
+    <div id='range-picker'>
       Range
-      <table id='range-table'>
+      <table className='range'>
         <tbody>
           <tr>
             {rangeList.map((item, index) => {

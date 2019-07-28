@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 
 import { getAlphaList } from '../utils/color';
 import '../css/style.css';
@@ -7,9 +6,9 @@ import '../css/style.css';
 const AlphaPicker = ({ onChange }) => {
   const alphaList = getAlphaList();
   return (
-    <div id='AlphaPicker'>
+    <div id='alpha-picker'>
       Alpha
-      <table id='alpha-table'>
+      <table className='alpha'>
         <tbody>
           <tr>
             {alphaList.map((item, index) => {

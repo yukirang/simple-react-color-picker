@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { getLayer } from '../utils/color';
 import '../css/style.css';
@@ -15,7 +15,7 @@ const BasePicker = ({ onChange }) => {
   };
 
   return (
-    <div id='BasePicker'>
+    <div id='base-picker'>
       Base
       <table className='base'>
         <tbody>

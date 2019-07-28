@@ -1,6 +1,6 @@
 {
   "name": "simple-react-color-picker",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "private": false,
   "license": "(ISC OR GPL-3.0)",
   "main": "dist/index.js",
